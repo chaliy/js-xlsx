@@ -4271,6 +4271,7 @@ function parse_si(x, opts) {
 	var html = opts ? opts.cellHTML : true;
 	var z = {};
 	if(!x) return null;
+	x = x.trim(); // Some generators put whitespace around tags..
 	var y;
 	/* 18.4.12 t ST_Xstring (Plaintext String) */
 	if ((y = x.match(/^<(?:\w+:)?t/))) {
